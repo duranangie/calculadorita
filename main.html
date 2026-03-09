@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Lenguajes Formales</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <div class="hero__badge">Teoría de Lenguajes</div>
+      <h1>Calculadora de Lenguajes Formales</h1>
+      <p>
+        Realiza operaciones sobre alfabetos, cadenas y lenguajes con una interfaz clara y organizada.
+      </p>
+    </header>
+
+    <section class="grid-modulos">
+      <!-- ALFABETO -->
+      <article class="card">
+        <div class="card__header">
+          <h2>Alfabeto</h2>
+          <span class="tag">Σ</span>
+        </div>
+
+        <div class="campo">
+          <label for="alfabetoA">Alfabeto A</label>
+          <input id="alfabetoA" type="text" placeholder="Ej: a,b,c" />
+        </div>
+
+        <div class="campo">
+          <label for="alfabetoB">Alfabeto B</label>
+          <input id="alfabetoB" type="text" placeholder="Ej: b,c,d" />
+        </div>
+
+        <div class="campo">
+          <label for="operacionAlfabeto">Operación</label>
+          <select id="operacionAlfabeto">
+            <option>Subconjunto</option>
+            <option>Pertenencia</option>
+            <option>Union</option>
+            <option>Interseccion</option>
+            <option>Complemento</option>
+            <option>Diferencia</option>
+            <option>Diferencia simetrica</option>
+          </select>
+        </div>
+
+        <button onclick="getinnetText()" id="btnAlfabeto" class="btn">Calcular</button>
+
+        <div class="resultado">
+          <span class="resultado__titulo">Resultado</span>
+          <p id="resultadoAlfabeto"></p>
+        </div>
+      </article>
+
+      <!-- CADENA -->
+      <article class="card">
+        <div class="card__header">
+          <h2>Cadena</h2>
+          <span class="tag">w</span>
+        </div>
+
+        <div class="campo">
+          <label for="cadena1">Cadena 1</label>
+          <input id="cadena1" type="text" placeholder="Ej: abba" />
+        </div>
+
+        <div class="campo">
+          <label for="cadena2">Cadena 2</label>
+          <input id="cadena2" type="text" placeholder="Ej: ba" />
+        </div>
+
+        <div class="campo">
+          <label for="operacionCadena">Operación</label>
+          <select id="operacionCadena">
+            <option>Longitud</option>
+            <option>Concatenacion</option>
+            <option>Potencia</option>
+            <option>Inversa</option>
+          </select>
+        </div>
+
+        <button id="btnCadena" class="btn">Calcular</button>
+
+        <div class="resultado">
+          <span class="resultado__titulo">Resultado</span>
+          <p id="resultadoCadena">Aquí aparecerá el resultado de la cadena.</p>
+        </div>
+      </article>
+
+      <!-- LENGUAJE -->
+      <article class="card">
+        <div class="card__header">
+          <h2>Lenguaje</h2>
+          <span class="tag">L</span>
+        </div>
+
+        <div class="campo">
+          <label for="lenguaje1">Lenguaje 1</label>
+          <input id="lenguaje1" type="text" placeholder="Ej: {a,ab,ba}" />
+        </div>
+
+        <div class="campo">
+          <label for="lenguaje2">Lenguaje 2</label>
+          <input id="lenguaje2" type="text" placeholder="Ej: {b,bb,ab}" />
+        </div>
+
+        <div class="campo">
+          <label for="operacionLenguaje">Operación</label>
+          <select id="operacionLenguaje">
+            <option>Concatenacion</option>
+            <option>Potenciacion</option>
+            <option>Inversa</option>
+            <option>Union</option>
+            <option>Interseccion</option>
+            <option>Resta</option>
+            <option>Clausura de Kleene</option>
+            <option>Clausura positiva</option>
+          </select>
+        </div>
+
+        <button id="btnLenguaje" class="btn">Calcular</button>
+
+        <div class="resultado">
+          <span class="resultado__titulo">Resultado</span>
+          <p id="resultadoLenguaje">Aquí aparecerá el resultado del lenguaje.</p>
+        </div>
+      </article>
+    </section>
+  </main>
+  <script src="alfabeto.js"></script>
+</body>
+</html>
