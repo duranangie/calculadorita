@@ -20,16 +20,29 @@ document.getElementById("btnCadena").addEventListener("click", () => {
     
 
     //potencia
-    
+    const potenciaA = cadenaA.value.repeat(parseInt(cadenaB.value));
+    console.log("Potencia de A:", potenciaA);
+
+    //reverse
+    const reverse = cadenaA.value.split("").reverse().join("");
+    console.log("Reverse de A:", reverse);
+
+
 
   if (operacionCadena.value === "Longitud") {
     resultadoCadena.innerText = longitudA + " y " + longitudB;
   }else if(operacionCadena.value === "Concatenacion") {
     resultadoCadena.innerText = concatenacion;
 
+  }else if(operacionCadena.value === "Potencia") {
+    resultadoCadena.innerText = potenciaA;
+  
+  }else if(operacionCadena.value === "Inversa") {
+    resultadoCadena.innerText = reverse;
+  }
 
 
 
     
 
-}});
+});
